@@ -1,0 +1,33 @@
+
+[ 
+    {
+        "id": 1,
+        "img": "https://cdn.shopify.com/s/files/1/2290/7887/products/F0089106901_1_1024x1024.jpg?v=1653840422",
+        "name": "T-shirt",
+        "price": "Rs.2,000"
+    },
+    {
+        "id": 2,
+        "img": "https://cdn.shopify.com/s/files/1/2290/7887/products/F0128106618_4_1024x1024.jpg?v=1644839272",
+         "name": "Crossbody-bag",
+         "price": "Rs.2,000"
+    },
+    {
+        "id": 3,
+        "img": "https://cdn.shopify.com/s/files/1/2290/7887/products/F0089106509_4_1024x1024.jpg?v=1649066255",
+         "name": "Mom Jeans",
+         "price": "Rs.1,500"
+    },
+    {
+        "id": 4,
+        "img": "https://cdn.shopify.com/s/files/1/2290/7887/products/F0091106901_4_1024x1024.jpg?v=1648537269",
+         "name": "Cross body bag",
+         "price": "Rs.3,300"
+    },
+    {
+        "id": 5,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYcwO6PL5m5wNHkswki2vg-AcTut0UVV7wNLbh1fC2Y8f5RkfIn-AE-VicsByRwQbyO8E&usqp=CAU",
+         "name": "Bi-color Belt",
+         "price": "Rs.1,000"
+    }
+]

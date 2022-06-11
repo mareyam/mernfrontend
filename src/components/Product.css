@@ -1,0 +1,268 @@
+.orange {
+    color: orange;
+}
+.green {
+    color: green;
+}
+.link {
+    text-decoration: none;
+    color: white;
+    margin-right: 10%;
+}
+.ecommerce {
+    margin-right: 10%;
+}
+
+
+.navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0.5rem 0rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  }
+  
+  .brand-name {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+  
+  .navigation-menu {
+    margin-left: auto;
+  }
+  
+  .navigation-menu ul {
+    display: flex;
+    padding: 0;
+  }
+  
+  .navigation-menu li {
+    list-style-type: none;
+    margin: 0 1rem;
+  }
+  
+  .navigation-menu li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  }
+  
+  .hamburger {
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #283b8b;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+  }
+  
+  .hamburger:hover {
+    background-color: #2642af;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .navigation-menu ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: white;
+      border-top: 1px solid black;
+      display: none;
+    }
+  
+    .navigation-menu li {
+      text-align: center;
+      margin: 0;
+    }
+  
+    .navigation-menu li a {
+      color: black;
+      width: 100%;
+      padding: 1.5rem 0;
+    }
+  
+    .navigation-menu li:hover {
+      background-color: white;
+    }
+  
+    .navigation-menu.expanded ul {
+      display: block;
+    }
+  }
+
+
+
+
+
+
+    .NewProductDiv input {
+  
+      width: 250px;
+    }
+    
+  
+  /*Home Div */
+.homediv {
+  margin: 0px;
+}
+
+.HomeImageDivMain {
+  display:flex;
+  flex-direction: row;  
+}
+
+.HomeImage3{
+  width: 100%;
+  height: 80%;
+ }
+
+ .product-container{
+  border: 4px solid rgb(209, 204, 204);
+}
+
+
+ @media screen and (max-width: 768px) {
+
+   .HomeImageDivMain{
+     flex-direction: column !important;
+   }
+ }
+     
+
+@media screen and (max-width: 1440px) { 
+  .HomeImage1 {
+    height: 100%;
+    width:100%;
+  }
+}
+
+
+
+
+
+/* Navigation */
+.navigation {
+  border: 2px solid red;
+}
+
+.TopMenuLinks ul li Link{
+  background-color:  pink;
+  background: opaque;
+
+}
+
+
+
+
+  /* Contact us*/
+  .ContactUsMain {
+    background-image: url("https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner-mobile.jpg");
+    height: 600px;
+    width: 1350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ContactUsCard {
+
+     width: 450px;
+      margin-top: 0px;
+       padding-top: 20px;
+        padding-right:5px;
+         margin: 0 auto;
+  }
+
+
+  @media screen and (max-width: 1440px) { 
+    .ContactUsMain {
+      background-image: url("https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner-mobile.jpg");
+      height: auto;
+      width: 320px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .ContactUsCard {
+     
+      width: 320px;
+      margin-top: 0px;
+      padding-top: 20px;
+      padding-right:5px;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display:flex;
+     
+    }
+  }
+
+  @media screen and (min-width: 768px) { 
+    .ContactUsCard {
+      
+      width: 320px;
+      margin-top: 0px;
+      padding-top: 20px;
+      padding-right:5px;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display:flex;
+      margin-left: 50%;
+
+    
+    }
+
+    .ContactUsMain {
+      background-image: url("https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner-mobile.jpg");
+      height: auto;
+      width: 320px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+  .ContactUsCard {
+      
+    width: 320px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-right:5px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display:flex; 
+   
+  }
+
+  .ContactUsMain {
+    background-image: url("https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner-mobile.jpg");
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
