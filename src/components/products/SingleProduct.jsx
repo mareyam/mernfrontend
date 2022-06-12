@@ -8,6 +8,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import {withRouter} from "react-router";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SingleProduct = (props) => {
     const locate_url ="http://localhost:4000";
@@ -49,6 +51,8 @@ const SingleProduct = (props) => {
                                   productService.deleteProduct(product._id).then((data) => {
                                     console.log(data);
                                     onDelete();
+                                    toast.warn("product deleted", {
+                                     position: toast.POSITION.BOTTOM_RIGHT});
                                   });
                                 }}> Delete
                             </Button>

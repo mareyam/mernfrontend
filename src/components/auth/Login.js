@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 import userService from "../services/UserService";
 import { useNavigate } from "react-router-dom";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -51,13 +53,15 @@ const Login = (props) => {
             userService
               .login(email, password)
               .then((data) => {
-                console.log(data);
-                // window.location.href = "/";
+                toast.success("success", {
+                position: toast.POSITION.BOTTOM_RIGHT});
+               
                 navigate("/product", { replace: true });
               })
-              .catch((err) => {
-                console.log(err);
-              });
+              .catch((err) => { 
+                toast.error(err.response.data, {
+                  position: toast.POSITION.BOTTOM_RIGHT});
+               });
           }}
         >
           Login

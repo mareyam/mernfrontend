@@ -19,7 +19,7 @@ import Login from './components/auth/Login';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Test from './components/products/Test';
-
+import AppATC from "./AddToCart/AppATC";
 
 function App() {
   return (
@@ -37,6 +37,7 @@ function App() {
               <Route exact path="/product/update"  element={<UpdateProduct/>}/>
               <Route exact path="/product/update/:id"  element={<UpdateProduct/>}/>
               <Route exact path="/product"  element={<Product/>}/>
+              <Route exact path="/app"  element={<AppATC/>}/>
               <Route exact path="/test"  element={<Test/>}/>
               <Route path="/" element={<Navigate to={<NotFound/>} />} /> 
             </Routes>

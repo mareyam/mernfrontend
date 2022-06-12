@@ -132,8 +132,15 @@
 }
 
 .HomeImage3{
-  width: 100%;
+  width: 237px;
   height: 80%;
+ }
+
+ @media screen and (max-width: 768px) {
+  .HomeImage3{
+    width: 100%;
+    height: 80%;
+   }
  }
 
  .product-container{

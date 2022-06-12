@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 import userService from "../services/UserService";
 import { useNavigate } from "react-router-dom";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -17,10 +20,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Register = (props) => {
   const classes = useStyles();
-  const [email, setEmail] = React.useState("usman.akram@gmail.com");
-  const [password, setPassword] = React.useState("usman");
-  const [name, setName] = React.useState("usman");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [name, setName] = React.useState("");
   const navigate = useNavigate();
+  const diffToast = () => {
+    if(!name) {
+      toast.error("name missing" , {
+      position:"bottom-right"
+    })};
+   
+    if(!email){
+      toast.error("email missing", {
+      position:"bottom-right" 
+    })};
+   
+    if(!password){
+      toast.error("password missing" , {
+      position:"bottom-right" 
+    })};
+    
+  }
 
   return (
     <div className={classes.container}>
@@ -60,19 +80,14 @@ const Register = (props) => {
           onClick={(e) => {
             userService
               .register(name, email, password)
-              .then((data) => {
-                console.log(data);
+              .then((data) => { console.log(data);
                 navigate("/login", { replace: true });
               })
-              .catch((err) => {
-                console.log(err);
-                
-                // toast.error(err.history.data, {
-                //   position: toast.POSITION.TOP_LEFT,
-                // });
-              });
-          }}
-        >
+              .catch((err) => { 
+                toast.error(err.response.data, {
+                  position: toast.POSITION.BOTTOM_RIGHT});
+          },diffToast);
+          }}>
           Register
         </Button>
       </div>

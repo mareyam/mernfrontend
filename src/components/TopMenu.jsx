@@ -41,26 +41,34 @@ const TopMenu = () => {
             <li> 
               <Link to="/contactus" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Contact</Link>
             </li>
-            <li> 
+            {/* <li> 
               <Link to="/product/new" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Add Product</Link>
-            </li>
-            <li style={{backgroundColor: "red"}}>
-              <Link to="/product" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Product</Link>
-            </li>
+            </li> */}
+           
 
             {!userService.isLoggedIn() ? 
             <>
+              <li style={{backgroundColor: "red"}}>
+                 <Link to="/product" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Product</Link>
+              </li>
               <li>
                 <Link to="/login" onClick={reloadNav}>Login</Link>
               </li>
               <li> 
                 <Link to="/register" onClick={reloadNav}>Register</Link>
               </li>
-            
+             
+
               </> 
-               :(  <Button variant="contained" color="primary" onClick={e=>{userService.logout();
-                window.location.href = '/Home';
-            }}>Log out  {userService.getLoggedInUser().name } </Button> )} ;
+               :(<>
+                <li style={{backgroundColor: "red"}}>
+                    <Link to="/product" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Product</Link>
+                  </li>
+                  <Button variant="contained" color="primary" onClick={e=>{userService.logout();
+                    window.location.href = '/Home';
+                  }}>Log out  {userService.getLoggedInUser().name } </Button>
+                 </>
+                 )} ;
           
           </ul>
         </div>

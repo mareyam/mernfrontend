@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
 import "./product.css";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -42,10 +45,14 @@ const NewProduct = () => {
     
         axios.post("http://localhost:4000/api/products",fd,config).then((res)=>{
             console.log(res.data)
+            toast.success("product added", {
+            position: toast.POSITION.BOTTOM_RIGHT});
+            navigate("/product", { replace: true });
         }).catch((err)=>{
-            console.log(err);
+             toast.error(err.response.data, {
+            position: toast.POSITION.BOTTOM_RIGHT});
         });
-        navigate("/product", { replace: true });
+        
     }
 
     return (
