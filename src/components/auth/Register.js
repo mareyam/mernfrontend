@@ -1,6 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Button } from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
+import { TextField, Button } from "@mui/material";
 import userService from "../services/UserService";
 import { useNavigate } from "react-router-dom";
 import {ToastContainer, toast} from 'react-toastify';

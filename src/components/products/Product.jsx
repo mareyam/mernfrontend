@@ -2,7 +2,7 @@ import React from "react";
 import SingleProduct from "./SingleProduct";
 import { useNavigate,Link } from 'react-router-dom';
 import productsService from "../services/ProductService";
-import { Button,Grid } from "@material-ui/core";
+import { Button,Grid } from "@mui/material";
 import userService from "../services/UserService";
 import ClipLoader from "react-spinners/ClipLoader";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -92,7 +92,7 @@ export default Product;
 // import SingleProduct from "./SingleProduct";
 // import { useNavigate,Link } from 'react-router-dom';
 // import productsService from "../services/ProductService";
-// import { Button,Grid } from "@material-ui/core";
+// import { Button,Grid } from "@mui/material";
 // import userService from "../services/UserService";
 
 
@@ -165,7 +165,7 @@ export default Product;
 // import SingleProduct from "./SingleProduct";
 // import { useNavigate,Link } from 'react-router-dom';
 // import productsService from "../services/ProductService";
-// import { Button,Grid } from "@material-ui/core";
+// import { Button,Grid } from "@mui/material";
 
 
 // const Product = (props) => {

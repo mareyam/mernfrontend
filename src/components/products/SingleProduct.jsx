@@ -1,5 +1,5 @@
 import {React} from "react";
-import {Grid,Button} from "@material-ui/core";
+import {Grid,Button} from "@mui/material";
 import productService from "../services/ProductService";
 import userService from "../services/UserService";
 import { useNavigate, useParams} from 'react-router-dom';
@@ -100,7 +100,7 @@ export default SingleProduct;
 //               Edit
 //             </Button>
 // import {React} from "react";
-// import {Grid,Button} from "@material-ui/core";
+// import {Grid,Button} from "@mui/material";
 // import productService from "../services/ProductService";
 // import { useNavigate, useParams} from 'react-router-dom';
 // import './product.css';
