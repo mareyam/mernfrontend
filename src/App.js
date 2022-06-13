@@ -44,13 +44,13 @@ function App() {
               path="/product/update/:id"
               element={<UpdateProduct />}
             />
+            {/* // */}
             <Route exact path="/product" element={<Product />} />
             <Route exact path="/productatc" element={<ProductATC />} />
             <Route exact path="/basketatc" element={<BasketATC />} />
             <Route exact path="/mainatc" element={<MainATC />} />
             <Route exact path="/appatc" element={<AppATC />} />
             <Route exact path="/headeratc" element={<HeaderATC />} />
-
             <Route exact path="/test" element={<Test />} />
             <Route path="/" element={<NotFound />} />
           </Routes>
