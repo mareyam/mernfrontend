@@ -1,0 +1,13 @@
+.AddNewProductDiv {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+} 
+.AddNewProductButton {
+color: white;
+padding: 10px 20px;
+border-radius: 4px;
+height: 60px;
+
+
+}

@@ -3,6 +3,9 @@ import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -50,7 +53,11 @@ const UpdateProduct = (props) => {
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err.response.data, {
+        position: toast.POSITION.BOTTOM_RIGHT});
       });
+
+    
   };
 
   return (

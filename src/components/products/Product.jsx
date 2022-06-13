@@ -7,7 +7,7 @@ import userService from "../services/UserService";
 import ClipLoader from "react-spinners/ClipLoader";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { ThreeDots } from  'react-loader-spinner'
-
+import "./Product2.css"
 
 import { css } from "@emotion/react";
 const override = css`

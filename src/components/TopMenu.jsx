@@ -46,7 +46,7 @@ const TopMenu = () => {
 
             {!userService.isLoggedIn() ? 
             <>
-              <li style={{backgroundColor: "red"}}>
+              <li>
                  <Link to="/product" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Product</Link>
               </li>
               <li>
@@ -59,15 +59,13 @@ const TopMenu = () => {
 
               </> 
                :(<>
-                <li style={{backgroundColor: "red"}}>
+                <li>
                     <Link to="/product" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Product</Link>
                   </li>
-                  <li style={{backgroundColor: "red"}}>
-                    <Link to="/appatc" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>All Products</Link>
+                  <li>
+                    <Link to="/appatc" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>ProductATC</Link>
                   </li>
-                  <li style={{backgroundColor: "red"}}>
-                    <Link to="/basketatc" onClick={() => {setIsNavExpanded(!isNavExpanded); }}>Basket</Link>
-                  </li>
+                 
                   
                   <Button variant="contained" color="primary" onClick={e=>{userService.logout();
                     window.location.href = '/Home';

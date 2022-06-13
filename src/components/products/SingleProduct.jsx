@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import {withRouter} from "react-router";
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "./SingleProduct.css";
+
 
 const SingleProduct = (props) => {
     const locate_url ="http://localhost:4000";
