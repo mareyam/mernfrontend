@@ -32,8 +32,8 @@
     "with-router": "^1.0.1"
   },
   "engines": {
-    "node": "16.x.x",
-    "npm": "8.x.x"
+    "node": "16.14.2",
+    "npm": "8.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
