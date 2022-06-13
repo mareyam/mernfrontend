@@ -1,7 +1,7 @@
 
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:4000/api/"; //fetch dara
-axios.defaults.headers.common["x-auth-token"] = localStorage.getItem("token"); //get auth token
+axios.defaults.headers.common["x-auth-token"] = localStorage.getItem("token"); //developers tool get auth token
 axios.defaults.headers.common['Content-Type'] = 'multipart/form-data'; //get form data
 class GenericService {
     constructor() {}

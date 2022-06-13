@@ -40,6 +40,7 @@ const NewProduct = () => {
         fd.append('price',price)
         //setting form data
         //diff deployment environment
+        //allows image to be stored  
         const config = {        
           headers: { 'content-type': 'multipart/form-data' }
         }
