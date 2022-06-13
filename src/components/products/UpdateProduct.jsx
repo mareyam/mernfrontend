@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { TextField, Button } from "@mui/material";
+import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import makeStyles from '@mui/styles/makeStyles';
+import { makeStyles } from "@material-ui/core/styles";
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -113,10 +113,10 @@ const UpdateProduct = (props) => {
  
 export default UpdateProduct;
 // import React from 'react';
-// import {Grid,TextField,Button} from '@mui/material';
+// import {Grid,TextField,Button} from '@material-ui/core';
 // import axios from "axios";
 // import { useNavigate,useParams } from 'react-router-dom';
-// import { makeStyles } from "@mui/material/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 // import productsService from '../services/ProductService';
 
@@ -151,10 +151,10 @@ export default UpdateProduct;
 //versio till 3pm
 
 // import React from 'react';
-// import {Grid,TextField,Button} from '@mui/material';
+// import {Grid,TextField,Button} from '@material-ui/core';
 // import axios from "axios";
 // import { useNavigate,useParams } from 'react-router-dom';
-// import { makeStyles } from "@mui/material/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 // import productsService from '../services/ProductService';
 // const useStyles = makeStyles((theme) => ({
@@ -227,10 +227,10 @@ export default UpdateProduct;
  
 // export default UpdateProduct;
 // import React from 'react';
-// import {Grid,TextField,Button} from '@mui/material';
+// import {Grid,TextField,Button} from '@material-ui/core';
 // import axios from "axios";
 // import { useNavigate,useParams } from 'react-router-dom';
-// import { makeStyles } from "@mui/material/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 // import productsService from '../services/ProductService';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Product.css';
-import { Grid, TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import { Grid, TextField, Button, Card, CardContent, Typography } from '@material-ui/core';
 
 const ContactUs = () => {
     return (

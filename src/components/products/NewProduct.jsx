@@ -1,7 +1,7 @@
 import React from 'react';
-import {TextField,Button} from '@mui/material';
+import {TextField,Button} from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
-import makeStyles from '@mui/styles/makeStyles';
+import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
 import "./product.css";
 import "./NewProduct.css";
@@ -80,9 +80,9 @@ export default NewProduct;
 
 
 // import React from 'react';
-// import {TextField,Button} from '@mui/material';
+// import {TextField,Button} from '@material-ui/core';
 // import { useNavigate } from 'react-router-dom';
-// import { makeStyles } from "@mui/material/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 // import axios from 'axios';
 // import "./product.css";
 

@@ -1,89 +1,98 @@
-import {React} from "react";
-import {Grid,Button} from "@mui/material";
+import { React } from "react";
+import { Grid, Button } from "@material-ui/core";
 import productService from "../services/ProductService";
 import userService from "../services/UserService";
-import { useNavigate, useParams} from 'react-router-dom';
-import './product.css';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import {withRouter} from "react-router";
-import {ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate, useParams } from "react-router-dom";
+import "./product.css";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import { withRouter } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./SingleProduct.css";
 
-
 const SingleProduct = (props) => {
-    const locate_url ="http://localhost:4000";
+  const locate_url = "http://localhost:4000";
 
-    const {product, onDelete,history} = props;
-    const navigate = useNavigate();
-    const params = useParams();
-    
-    // console.log(params);
- 
+  const { product, onDelete, history } = props;
+  const navigate = useNavigate();
+  const params = useParams();
 
+  // console.log(params);
 
-    return (
-      <Grid item xs={6} md={8}>
-        <div className="HomeImage3">
-          <CardContent>
-              <img
-                className="SingleProductImage"
-                src={`${locate_url}/${product.imagePath}`}
-                alt="img"/>
-                <Typography gutterBottom variant="h6" component="div" >
-                  {product.name}
-                </Typography>
-                <Typography variant="p" color="text.secondary" component="div" >
-                  Rs.{product.price}
-                </Typography>
-          </CardContent>
+  return (
+    <Grid item xs={6} md={8}>
+      <div className="HomeImage3">
+        <CardContent>
+          <img
+            className="SingleProductImage"
+            src={`${locate_url}/${product.imagePath}`}
+            alt="img"
+          />
+          <Typography gutterBottom variant="h6" component="div">
+            {product.name}
+          </Typography>
+          <Typography variant="p" color="text.secondary" component="div">
+            Rs.{product.price}
+          </Typography>
+        </CardContent>
 
-          <div style={{display:"flex"}}>
-             <CardActions className="CardActions">
-                 {userService.isAdmin() && (
-                      <div className="SingleProductButtons" style={{marginBottom:"20%"}}>
-                          <Button
-                                color="secondary"
-                                variant="contained"
-                                fullWidth
-                                style={{margin:"0px auto"}}
-                                onClick={(e) => {
-                                  productService.deleteProduct(product._id).then((data) => {
-                                    console.log(data);
-                                    onDelete();
-                                    toast.warn("product deleted", {
-                                     position: toast.POSITION.BOTTOM_RIGHT});
-                                  });
-                                }}> Delete
-                            </Button>
-                            <Button
-                                style={{margin:"0px auto"}}
-                                  color="primary"
-                                  fullWidth
-                                  variant="contained"
-                                  onClick={(e) => {
-                                    console.log("nav to update");
-                                    navigate("/product/update/" + product._id, { replace: true });
-                                    console.log(props.match.params.id);
-                                  }}> Edit
-                            </Button>
-                      </div>
-                    )}
-                        <div style={{display:"block"}}>
-                            {userService.isLoggedIn() && (
-                              <>
-                                {/* <Button fullWidth color="primary" variant="contained">Add to cart</Button> */}
-                              </>
-                            )}
-                        </div>
-          
+        <div style={{ display: "flex" }}>
+          <CardActions className="CardActions">
+            {userService.isAdmin() && (
+              <div
+                className="SingleProductButtons"
+                style={{ marginBottom: "20%" }}
+              >
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  fullWidth
+                  style={{ margin: "0px auto" }}
+                  onClick={(e) => {
+                    productService.deleteProduct(product._id).then((data) => {
+                      console.log(data);
+                      onDelete();
+                      toast.warn("product deleted", {
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                      });
+                    });
+                  }}
+                >
+                  {" "}
+                  Delete
+                </Button>
+                <Button
+                  style={{ margin: "0px auto" }}
+                  color="primary"
+                  fullWidth
+                  variant="contained"
+                  onClick={(e) => {
+                    console.log("nav to update");
+                    navigate("/product/update/" + product._id, {
+                      replace: true,
+                    });
+                    console.log(props.match.params.id);
+                  }}
+                >
+                  {" "}
+                  Edit
+                </Button>
+              </div>
+            )}
+            <div style={{ display: "block" }}>
+              {userService.isLoggedIn() && (
+                <>
+                  {/* <Button fullWidth color="primary" variant="contained">Add to cart</Button> */}
+                </>
+              )}
+            </div>
           </CardActions>
         </div>
-        </div>
-      </Grid>
-    );
+      </div>
+    </Grid>
+  );
 };
 export default SingleProduct;
 
@@ -100,7 +109,7 @@ export default SingleProduct;
 //               Edit
 //             </Button>
 // import {React} from "react";
-// import {Grid,Button} from "@mui/material";
+// import {Grid,Button} from "@material-ui/core";
 // import productService from "../services/ProductService";
 // import { useNavigate, useParams} from 'react-router-dom';
 // import './product.css';
@@ -117,10 +126,9 @@ export default SingleProduct;
 //     const {product, onDelete} = props;
 //     const navigate = useNavigate();
 //     const params = useParams();
-    
+
 //     console.log(params);
 //     const id = params;
-
 
 //     return (
 //       <div className="container">
@@ -167,12 +175,12 @@ export default SingleProduct;
 //         </Grid>
 //       </div>
 //     );
-   
+
 // };
 // export default SingleProduct;
 
-
-{/* <Card sx={{ maxWidth: 345 }}>
+{
+  /* <Card sx={{ maxWidth: 345 }}>
 <CardMedia
   component="img"
   alt="green iguana"
@@ -199,10 +207,10 @@ export default SingleProduct;
                  navigate('/product/update/'+product._id, { replace: true });  
             }}> Edit</Button>
 </CardActions>
-</Card> */}
+</Card> */
+}
 
 // export default withRouter (SingleProduct);
-
 
 // import * as React from 'react';
 // import { styled } from '@mui/material/styles';
@@ -239,7 +247,7 @@ export default SingleProduct;
 //         <Grid item xs={12} sm container>
 //           <Grid item xs container direction="column" spacing={2}>
 //             <Grid item xs>
-              
+
 //               <Typography variant="body2" gutterBottom>
 //                 Full resolution 1920x1080 • JPEG
 //               </Typography>
