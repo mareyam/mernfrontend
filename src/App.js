@@ -44,7 +44,7 @@ function App() {
               path="/product/update/:id"
               element={<UpdateProduct />}
             />
-            {/* // */}
+            {/* // g*/}
             <Route exact path="/product" element={<Product />} />
             <Route exact path="/productatc" element={<ProductATC />} />
             <Route exact path="/basketatc" element={<BasketATC />} />
