@@ -74,7 +74,7 @@ const SingleProduct = (props) => {
                         <div style={{display:"block"}}>
                             {userService.isLoggedIn() && (
                               <>
-                                <Button fullWidth color="primary" variant="contained">Add to cart</Button>
+                                {/* <Button fullWidth color="primary" variant="contained">Add to cart</Button> */}
                               </>
                             )}
                         </div>

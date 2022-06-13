@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
@@ -29,7 +29,15 @@ const UpdateProduct = (props) => {
   const params = useParams();
   const classes = useStyles();
   console.log(params.id);
-
+  useEffect(()=>{
+    axios
+    .get("http://localhost:4000/api/products/"+ params.id)
+    .then((res) => {
+      console.log(res.data)
+      setName(res.data.name)
+      setPrice(res.data.price)
+    }).catch(err => console.log(err))
+  },[])
 
   const sendRequest = () => {
     let fd = new FormData() //send to API
@@ -45,6 +53,8 @@ const UpdateProduct = (props) => {
 
     const id = params.id;
     const url = "http://localhost:4000/api/products/" + id;
+
+  
     axios
       .put(url, fd,config)
       .then((res) => {
