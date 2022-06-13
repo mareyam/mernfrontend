@@ -50,7 +50,6 @@ function App() {
             <Route exact path="/mainatc" element={<MainATC />} />
             <Route exact path="/appatc" element={<AppATC />} />
             <Route exact path="/headeratc" element={<HeaderATC />} />
-
             <Route exact path="/test" element={<Test />} />
             <Route path="/" element={<NotFound />} />
           </Routes>
